@@ -13,17 +13,15 @@ display_welcome() {
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${BLUE}[+]                AUTO INSTALLER THEMA             [+]${NC}"
-  echo -e "${BLUE}[+]                  © FADHOST OFFC                [+]${NC}"
+  echo -e "${BLUE}[+]                  © FARIS OFFC                [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${RED}[+] =============================================== [+]${NC}"
   echo -e ""
   echo -e "script ini di buat untuk mempermudah penginstalasian thema pterodactyle,"
   echo -e "dilarang keras untuk memperjual belikan."
   echo -e ""
-  echo -e "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :"
-  echo -e "@fadhost"
   echo -e "𝗖𝗥𝗘𝗗𝗜𝗧𝗦 :"
-  echo -e "@FadhostOffc"
+  echo -e "@Farisoffc"
   sleep 4
   clear
 }
@@ -56,20 +54,19 @@ install_jq() {
 check_token() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]               LICENSY FADHOST OFFC             [+]${NC}"
+  echo -e "${BLUE}[+]               LICENSY FarisOffc OFFC             [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "fadhostgagalmoveon" ]; then
+  if [ "$USER_TOKEN" = "Faristamvan" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
-    echo -e "${GREEN}Buy dulu Gih Ke Fadhost${NC}"
-    echo -e "${YELLOW}TELEGRAM : @fadhost${NC}"
-    echo -e "${YELLOW}WHATSAPP : 6289530583676${NC}"
+    echo -e "${GREEN}Buy dulu Gih Ke FarisOffc${NC}"
+    echo -e "${YELLOW}WHATSAPP : 6288297877862${NC}"
     echo -e "${YELLOW}HARGA TOKEN : 10K FREE UPDATE JIKA ADA TOKEN BARU${NC}"
-    echo -e "${YELLOW}©FadhostOffc${NC}"
+    echo -e "${YELLOW}©FarisOffc${NC}"
     exit 1
   fi
   clear
@@ -341,17 +338,13 @@ uninstall_panel() {
   echo -e "${BLUE}[+]                    UNINSTALL PANEL                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-read -p "UninstallPanel y/n " ypanel
-read -p "UninstallWings y/n " ywings
-read -p "Input y/n " y1
-read -p "Input y/n " y2
+
 
 bash <(curl -s https://pterodactyl-installer.se) <<EOF
-6
-ypanel
-ywings
-y1
-y2
+y
+y
+y
+y
 EOF
 
 
@@ -456,11 +449,11 @@ while true; do
   echo -e "${RED}  ,ggggg        gggggggg.                                 ${NC}"
   echo -e "${RED} ,ggg'               'ggg.                                ${NC}"
   echo -e "${RED}',gg       ,ggg.      'ggg:                               ${NC}"
-  echo -e "${RED}'ggg      ,gg'''  .    ggg       Auto Installer Fadhost   ${NC}"
+  echo -e "${RED}'ggg      ,gg'''  .    ggg       Auto Installer FarisOffc   ${NC}"
   echo -e "${RED}gggg      gg     ,     ggg      ------------------------  ${NC}"
-  echo -e "${RED}ggg:     gg.     -   ,ggg       • Telegram : fadhost      ${NC}"
-  echo -e "${RED} ggg:     ggg._    _,ggg        • Creadit  : FADHOSTOFFC  ${NC}"
-  echo -e "${RED} ggg.    '.'''ggggggp           • Support by FadhostOffc  ${NC}"
+  echo -e "${RED}ggg:     gg.     -   ,ggg       • Telegram : -      ${NC}"
+  echo -e "${RED} ggg:     ggg._    _,ggg        • Creadit  : FarisOffc  ${NC}"
+  echo -e "${RED} ggg.    '.'''ggggggp           • Support by FarisOffc  ${NC}"
   echo -e "${RED}  'ggg    '-.__                                           ${NC}"
   echo -e "${RED}    ggg                                                   ${NC}"
   echo -e "${RED}      ggg                                                 ${NC}"
