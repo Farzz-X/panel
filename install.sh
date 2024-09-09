@@ -17,7 +17,7 @@ display_welcome() {
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${RED}[+] =============================================== [+]${NC}"
   echo -e ""
-  echo -e "script ini di buat untuk mempermudah penginstalasian thema pterodactyle,"
+  echo -e "script ini di buat untuk mempermudah penginstalasian thema Pterodactyl,"
   echo -e "dilarang keras untuk memperjual belikan."
   echo -e ""
   echo -e "𝗖𝗥𝗘𝗗𝗜𝗧𝗦 :"
@@ -60,7 +60,7 @@ check_token() {
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "Faristamvan" ]; then
+  if [ "$USER_TOKEN" = "Farisoffc" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
     echo -e "${GREEN}Buy dulu Gih Ke FarisOffc${NC}"
@@ -223,7 +223,7 @@ uninstall_theme() {
   echo -e "${BLUE}[+]                    DELETE THEME                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  bash <(curl https://raw.githubusercontent.com/gitfdil1248/thema/main/repair.sh)
+  bash <(curl https://raw.githubusercontent.com/Farisofc/panel/main/repair.sh)
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "${GREEN}[+]                 DELETE THEME SUKSES             [+]${NC}"
@@ -242,7 +242,7 @@ echo -e "${BLUE}[+] =============================================== [+]${NC}"
 echo -e "                                                                   "
 
 # Unduh file tema
-wget -O /root/C2.zip https://github.com/gitfdil1248/thema/raw/main/C2.zip
+wget -O /root/C2.zip https://github.com/Farisofc/panel/raw/main/C2.zip
 
 # Ekstrak file tema
 unzip /root/C2.zip -d /root/pterodactyl
@@ -444,22 +444,30 @@ check_token
 while true; do
   clear
   echo -e "                                                                     "
-  echo -e "${RED}        _,gggggggggg.                                     ${NC}"
-  echo -e "${RED}    ,ggggggggggggggggg.                                   ${NC}"
-  echo -e "${RED}  ,ggggg        gggggggg.                                 ${NC}"
-  echo -e "${RED} ,ggg'               'ggg.                                ${NC}"
-  echo -e "${RED}',gg       ,ggg.      'ggg:                               ${NC}"
-  echo -e "${RED}'ggg      ,gg'''  .    ggg       Auto Installer FarisOffc   ${NC}"
-  echo -e "${RED}gggg      gg     ,     ggg      ------------------------  ${NC}"
-  echo -e "${RED}ggg:     gg.     -   ,ggg       • Telegram : -      ${NC}"
-  echo -e "${RED} ggg:     ggg._    _,ggg        • Creadit  : FarisOffc  ${NC}"
-  echo -e "${RED} ggg.    '.'''ggggggp           • Support by FarisOffc  ${NC}"
-  echo -e "${RED}  'ggg    '-.__                                           ${NC}"
-  echo -e "${RED}    ggg                                                   ${NC}"
-  echo -e "${RED}      ggg                                                 ${NC}"
-  echo -e "${RED}        ggg.                                              ${NC}"
-  echo -e "${RED}          ggg.                                            ${NC}"
-  echo -e "${RED}             b.                                           ${NC}"
+  echo -e "                         ⢀⠀⡠⢠⡆⣀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+echo -e "${RED}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣾⣿⣿⣿⣿⣷⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
+echo -e "${RED}⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣼⣿⣿⣿⣿⣿⣿⣿⣷⡶⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
+echo -e "${RED}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
+echo -e "${RED}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
+echo -e "${RED}⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣿⣿⣿⣿⣿⣿⣿⣿⣿⠻⠀⠀⠀⠀⠀⠀⠀⠀⠀ ${NC}"
+echo -e "${RED}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣸⠿⠿⠿⠛⠛⠛⠛⠛⠃⠠⠤⡀⠀⠀⠀⠀⠀⠀⠀${NC}"
+echo -e "${RED}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠆⠀⠀⠀⠀⠀⠀⠀${NC}"
+echo -e "${RED}⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⣀⠠⠄⠀⠀⠀⠀⠀⠐⠒⠶⠌⡀⠀⠀⠀⠀⠀⠀⠀${NC}"
+echo -e "${RED}⠀⠀⠀⠀⠀⢀⠄⠊⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠠⠀⠀⠀⠀Auto Installer FarisOffc   ${NC}"
+echo -e "${RED}⠀⠀⠀⠀⠀⡐⠁⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣶⡄⠀⠀⠀⠀⠀⢁⠀⠀⠀⠀------------------------  ${NC}"
+echo -e "${RED}⠀⠀⠀⠀⡐⠀⠀⠀⠀⠀⠀⠀⣾⠿⡛⠛⠛⠿⣷⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀• Creadit  : FarisOffc  ${NC}"
+echo -e "${RED}⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⢠⡇⢀⢎⡷⡄⠀• Support by FarisOffc  ${NC}"
+echo -e "${RED}⠀⠀⠀⡌⠀⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡠⢣⣟⡞⠀⠀⠀${NC}"
+echo -e "${RED}⠀⠀⠰⠀⠀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡘⣱⢯⠏⠘⡄⠀⠀${NC}"
+echo -e "${RED}⠀⢠⠇⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢌⡼⣳⠋⠀⠀⣠⠀${NC}"
+echo -e "${RED}⠀⠸⢶⡤⠄⢀⣀⡇⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⣠⢂⣞⣽⡗⠂⠀⢻⠋⠀⠀${NC}"
+echo -e "${RED}⠀⠀⢀⠃⠀⢀⣹⣧⣴⣶⣾⣿⣿⣿⣿⣿⣿⣿⡿⢁⢎⣾⣿⣷⣦⠀⠈⡆⠀⠀${NC}"
+echo -e "${RED}⠀⠀⡘⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣠⣯⣿⣿⣿⣿⡿⠀⠀⢰⠀⠀${NC}"
+echo -e "${RED}⠀⢀⠃⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⣴⣷⣿⣿⣿⣿⣿⡇⠀⠀⠈⡆⠀${NC}"
+echo -e "${RED}⠀⠈⠀⠀⠀⣸⠟⠟⠉⠋⠈⠁⠈⠁⠈⠀⠈⠀⠃⠘⠀⠉⠹⠉⣷⠀⠀⠀⠃⠀${NC}"
+echo -e "${RED}⠀⡆⠀⠀⢠⡻⠤⠤⠖⠲⠒⠲⠒⡞⢳⣾⠗⠖⠲⠒⠻⠒⠒⠚⡅⢃⠀⠀⢰⠀${NC}"
+echo -e "${RED}⢠⣁⣀⣀⡀⢇⣀⣠⣤⣤⣴⣦⠎⡰⣿⣯⣴⣶⣶⣦⣴⣤⣦⣤⠁⢸⣶⣾⣿⣇ ${NC}"
+echo -e "${RED}⢸⣿⣿⣿⠇⢼⣿⣿⣿⣿⡿⠃⠜⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠸⣿⣿⣿⡿ ${NC}"        
   echo -e "                                                                     "
   echo -e "BERIKUT LIST INSTALL :"
   echo "1. Install theme"
