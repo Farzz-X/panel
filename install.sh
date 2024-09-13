@@ -5,6 +5,8 @@ BLUE='\033[0;34m'
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
+BLACK='\033[0;35m'
+PURPLE='\033[0;36m'
 NC='\033[0m'
 
 # Display welcome message
@@ -443,7 +445,7 @@ check_token
 
 while true; do
   clear
-echo -e "                       ⢀⠀⡠⢠⡆⣀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+echo -e "                    ⢀⠀⡠⢠⡆⣀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 echo -e "${BLACK}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣾⣿⣿⣿⣿⣷⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
 echo -e "${BLACK}⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣼⣿⣿⣿⣿⣿⣿⣿⣷⡶⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
 echo -e "${BLACK}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
@@ -453,9 +455,9 @@ echo -e "${BLACK}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣸⠿⠿⠿⠛⠛⠛⠛⠛⠃⠠
 echo -e "${WHITE}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠆⠀⠀⠀⠀⠀⠀⠀${NC}"
 echo -e "${WHITE}⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⣀⠠⠄⠀⠀⠀⠀⠀⠐⠒⠶⠌⡀⠀⠀⠀⠀⠀⠀⠀${NC}"
 echo -e "${WHITE}⠀⠀⠀⠀⠀⢀⠄⠊⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠠⠀⠀⠀⠀Auto Installer FarisOffc   ${NC}"
-echo -e "${RED}⠀⠀⠀⠀⠀⡐⠁⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣶⡄⠀⠀⠀⠀⠀⢁⠀⠀⠀⠀------------------------  ${NC}"
-echo -e "${RED}⠀⠀⠀⠀⡐⠀⠀⠀⠀⠀⠀⠀⣾⠿⡛⠛⠛⠿⣷⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀• Creadit  : FarisOffc  ${NC}"
-echo -e "${RED}⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⢠⡇⢀⢎⡷⡄⠀• Support by FarisOffc  ${NC}"
+echo -e "${WHITE}⠀⠀⠀⠀⠀⡐⠁⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣶⡄⠀⠀⠀⠀⠀⢁⠀⠀⠀⠀------------------------  ${NC}"
+echo -e "${WHITE}⠀⠀⠀⠀⡐⠀⠀⠀⠀⠀⠀⠀⣾⠿⡛⠛⠛⠿⣷⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀• Creadit  : FarisOffc  ${NC}"
+echo -e "${WHITE}⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⢠⡇⢀⢎⡷⡄⠀• Support by FarisOffc  ${NC}"
 echo -e "${WHITE}⠀⠀⠀⡌⠀⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡠⢣⣟⡞⠀⠀⠀${NC}"
 echo -e "${WHITE}⠀⠀⠰⠀⠀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡘⣱⢯⠏⠘⡄⠀⠀${NC}"
 echo -e "${WHITE}⠀⢠⠇⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢌⡼⣳⠋⠀⠀⣠⠀${NC}"
