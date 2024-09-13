@@ -13,11 +13,11 @@ display_welcome() {
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${BLUE}[+]                AUTO INSTALLER THEMA             [+]${NC}"
-  echo -e "${BLUE}[+]                  © FARIS OFFC                [+]${NC}"
+  echo -e "${BLUE}[+]                  © FARIS OFFC                   [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
-  echo -e "${RED}[+] =============================================== [+]${NC}"
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e ""
-  echo -e "script ini di buat untuk mempermudah penginstalasian thema Pterodactyl,"
+  echo -e "script ini di buat untuk mempermudah penginstalasian Thema/Panel Pterodactyl,"
   echo -e "dilarang keras untuk memperjual belikan."
   echo -e ""
   echo -e "𝗖𝗥𝗘𝗗𝗜𝗧𝗦 :"
@@ -30,15 +30,15 @@ display_welcome() {
 install_jq() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]             UPDATE & INSTALL JQ                 [+]${NC}"
+  echo -e "${RED}[+]             UPDATE & INSTALL JQ                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo apt update && sudo apt install -y jq
   if [ $? -eq 0 ]; then
     echo -e "                                                       "
-    echo -e "${GREEN}[+] =============================================== [+]${NC}"
-    echo -e "${GREEN}[+]              INSTALL JQ BERHASIL                [+]${NC}"
-    echo -e "${GREEN}[+] =============================================== [+]${NC}"
+    echo -e "${RED}[+] =============================================== [+]${NC}"
+    echo -e "${BLUE}[+]              INSTALL JQ BERHASIL                [+]${NC}"
+    echo -e "${RED}[+] =============================================== [+]${NC}"
   else
     echo -e "                                                       "
     echo -e "${RED}[+] =============================================== [+]${NC}"
@@ -444,7 +444,7 @@ check_token
 while true; do
   clear
 echo -e "                                                                   "
-echo -e "${RED}               ⢀⠀⡠⢠⡆⣀⡄⠀⠀⠀⠀⠀⠀⠀⠀ ${NC}"
+echo -e "${RED}             ⢀⠀⡠⢠⡆⣀⡄⠀⠀⠀⠀⠀⠀⠀⠀     ${NC}"
 echo -e "${RED}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣾⣿⣿⣿⣿⣷⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
 echo -e "${RED}⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣼⣿⣿⣿⣿⣿⣿⣿⣷⡶⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
 echo -e "${RED}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
