@@ -72,6 +72,42 @@ check_token() {
   clear
 }
 
+install_panel() {
+echo -e "                                                       "
+echo -e "${BLUE}[+] ========================================== [+]${NC}"
+echo -e "${BLUE}[+]                    INSTALL PANEL                   [+]${NC}"
+echo -e "${BLUE}[+] ========================================== [+]${NC}"
+  echo -e "                                                       "
+read -p "Masukkan domain: " domain
+read -p "Masukkan Email: " email
+read -p "Masukkan Password Login: " password
+read -p "Masukkan Subdomain Panel: " subdomain
+read -p "Masukkan Domainnode: " domainnode
+bash <(curl -s https://pterodactyl-installer.se) <<EOF
+0
+farissss
+kiwkiw
+slebew
+faris002
+Asia/Jakarta
+$email
+$email
+farisoffc
+adm
+adm
+$password
+$subdomain
+y
+y
+y
+y
+yes
+A
+EOF
+}
+
+
+
 # Install theme
 install_theme() {
   while true; do
@@ -470,20 +506,24 @@ echo -e "${RED}⢠⣁⣀⣀⡀⢇⣀⣠⣤⣤⣴⣦⠎⡰⣿⣯⣴⣶⣶⣦⣴�
 echo -e "${RED}⢸⣿⣿⣿⠇⢼⣿⣿⣿⣿⡿⠃⠜⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠸⣿⣿⣿⡿ ${NC}"
   echo -e "                                                                     "
   echo -e "BERIKUT LIST INSTALL :"
-  echo "${RED} 1. Install Theme"
-  echo "${BLUE} 2. Uninstall Theme"
-  echo "${GREEN} 3. Configure Wings"
-  echo "${RED} 4. Create Node"
-  echo "${BLUE} 5. Uninstall Panel"
-  echo "${GREEN} 6. Stellar Theme"
-  echo "${RED} 7. Hack Back Panel"
-  echo "${BLUE} 8. Ubah Pw Vps"
-  echo "${GREEN} x. Exit"
+  echo -e "${RED} 0. Install Panel"
+  echo -e "${RED} 1. Install Theme"
+  echo -e "${BLUE} 2. Uninstall Theme"
+  echo -e "${GREEN} 3. Configure Wings"
+  echo -e "${RED} 4. Create Node"
+  echo -e "${BLUE} 5. Uninstall Panel"
+  echo -e "${GREEN} 6. Stellar Theme"
+  echo -e "${RED} 7. Hack Back Panel"
+  echo -e "${BLUE} 8. Ubah Pw Vps"
+  echo -e "${GREEN} x. Exit"
   echo -e "${YELLOW} Masukkan pilihan 1/2/x:"
   read -r MENU_CHOICE
   clear
 
   case "$MENU_CHOICE" in
+  0) 
+  install_panel
+  ;;
     1)
       install_theme
       ;;
