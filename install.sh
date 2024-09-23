@@ -472,21 +472,24 @@ echo -e "${RED}⢠⣁⣀⣀⡀⢇⣀⣠⣤⣤⣴⣦⠎⡰⣿⣯⣴⣶⣶⣦⣴�
 echo -e "${RED}⢸⣿⣿⣿⠇⢼⣿⣿⣿⣿⡿⠃⠜⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠸⣿⣿⣿⡿ ${NC}"
   echo -e "                                                 "                    "
   echo -e "BERIKUT LIST INSTALL :"
-  echo  "0. Install Panel"
-  echo  "1. Install Theme"
-  echo  "2. Uninstall Theme"
-  echo  "3. Configure Wings"
-  echo  "4. Create Node"
-  echo  "5. Uninstall Panel"
-  echo  "6. Stellar Theme"
-  echo  "7. Hack Back Panel"
-  echo  "8. Ubah Pw Vps"
-  echo  "x. Exit"
+  echo "0. Install panel"
+  echo "1. Install theme"
+  echo "2. Uninstall theme"
+  echo "3. Configure Wings"
+  echo "4. Create Node"
+  echo "5. Uninstall Panel"
+  echo "6. Stellar Theme"
+  echo "7. Hack Back Panel"
+  echo "8. Ubah Pw Vps"
+  echo "x. Exit"
   echo -e "Masukkan pilihan 1/2/x:"
   read -r MENU_CHOICE
   clear
 
   case "$MENU_CHOICE" in
+  0)
+  install_panel
+  ;;
     1)
       install_theme
       ;;
