@@ -72,40 +72,6 @@ check_token() {
   clear
 }
 
-install_panel() {
-echo -e "                                                       "
-echo -e "${BLUE}[+] ========================================== [+]${NC}"
-echo -e "${BLUE}[+]                    INSTALL PANEL                   [+]${NC}"
-echo -e "${BLUE}[+] ========================================== [+]${NC}"
-  echo -e "                                                       "
-read -p "Masukkan domain: " domain
-read -p "Masukkan Email: " email
-read -p "Masukkan Password Login: " password
-read -p "Masukkan Subdomain Panel: " subdomain
-read -p "Masukkan Domainnode: " domainnode
-bash <(curl -s https://pterodactyl-installer.se) <<EOF
-0
-farissss
-kiwkiw
-slebew
-faris002
-Asia/Jakarta
-$email
-$email
-farisoffc
-adm
-adm
-$password
-$subdomain
-y
-y
-y
-y
-yes
-A
-EOF
-}
-
 
 
 # Install theme
@@ -504,7 +470,7 @@ echo -e "${RED}⠀⠈⠀⠀⠀⣸⠟⠟⠉⠋⠈⠁⠈⠁⠈⠀⠈⠀⠃⠘⠀�
 echo -e "${RED}⠀⡆⠀⠀⢠⡻⠤⠤⠖⠲⠒⠲⠒⡞⢳⣾⠗⠖⠲⠒⠻⠒⠒⠚⡅⢃⠀⠀⢰⠀${NC}"
 echo -e "${RED}⢠⣁⣀⣀⡀⢇⣀⣠⣤⣤⣴⣦⠎⡰⣿⣯⣴⣶⣶⣦⣴⣤⣦⣤⠁⢸⣶⣾⣿⣇ ${NC}"
 echo -e "${RED}⢸⣿⣿⣿⠇⢼⣿⣿⣿⣿⡿⠃⠜⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠸⣿⣿⣿⡿ ${NC}"
-  echo -e "                                                                     "
+  echo -e "                                                 "                    "
   echo -e "BERIKUT LIST INSTALL :"
   echo  "0. Install Panel"
   echo  "1. Install Theme"
@@ -521,9 +487,6 @@ echo -e "${RED}⢸⣿⣿⣿⠇⢼⣿⣿⣿⣿⡿⠃⠜⣽⣿⣿⣿⣿⣿⣿⣿�
   clear
 
   case "$MENU_CHOICE" in
-  0) 
-  install_panel
-  ;;
     1)
       install_theme
       ;;
