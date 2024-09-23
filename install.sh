@@ -104,6 +104,15 @@ y
 yes
 A
 EOF
+echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e ""
+  sleep 2
+  clear
+  exit 0
+
 }
 
 
@@ -506,17 +515,17 @@ echo -e "${RED}⢠⣁⣀⣀⡀⢇⣀⣠⣤⣤⣴⣦⠎⡰⣿⣯⣴⣶⣶⣦⣴�
 echo -e "${RED}⢸⣿⣿⣿⠇⢼⣿⣿⣿⣿⡿⠃⠜⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠸⣿⣿⣿⡿ ${NC}"
   echo -e "                                                                     "
   echo -e "BERIKUT LIST INSTALL :"
-  echo -e "${RED} 0. Install Panel"
-  echo -e "${RED} 1. Install Theme"
-  echo -e "${BLUE} 2. Uninstall Theme"
-  echo -e "${GREEN} 3. Configure Wings"
-  echo -e "${RED} 4. Create Node"
-  echo -e "${BLUE} 5. Uninstall Panel"
-  echo -e "${GREEN} 6. Stellar Theme"
-  echo -e "${RED} 7. Hack Back Panel"
-  echo -e "${BLUE} 8. Ubah Pw Vps"
-  echo -e "${GREEN} x. Exit"
-  echo -e "${YELLOW} Masukkan pilihan 1/2/x:"
+  echo  "0. Install Panel"
+  echo  "1. Install Theme"
+  echo  "2. Uninstall Theme"
+  echo  "3. Configure Wings"
+  echo  "4. Create Node"
+  echo  "5. Uninstall Panel"
+  echo  "6. Stellar Theme"
+  echo  "7. Hack Back Panel"
+  echo  "8. Ubah Pw Vps"
+  echo  "x. Exit"
+  echo -e Masukkan pilihan 1/2/x:"
   read -r MENU_CHOICE
   clear
 
