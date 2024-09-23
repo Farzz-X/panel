@@ -13,11 +13,11 @@ display_welcome() {
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${BLUE}[+]                AUTO INSTALLER THEMA             [+]${NC}"
-  echo -e "${BLUE}[+]                  © FARIS OFFC                   [+]${NC}"
+  echo -e "${BLUE}[+]                  © FARIS OFFC                [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e ""
-  echo -e "script ini di buat untuk mempermudah penginstalasian Thema/Panel Pterodactyl,"
+  echo -e "script ini di buat untuk mempermudah penginstalasian thema pterodactyl,"
   echo -e "dilarang keras untuk memperjual belikan."
   echo -e ""
   echo -e "𝗖𝗥𝗘𝗗𝗜𝗧𝗦 :"
@@ -30,15 +30,15 @@ display_welcome() {
 install_jq() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${RED}[+]             UPDATE & INSTALL JQ                 [+]${NC}"
+  echo -e "${BLUE}[+]             UPDATE & INSTALL JQ                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo apt update && sudo apt install -y jq
   if [ $? -eq 0 ]; then
     echo -e "                                                       "
-    echo -e "${RED}[+] =============================================== [+]${NC}"
-    echo -e "${BLUE}[+]              INSTALL JQ BERHASIL                [+]${NC}"
-    echo -e "${RED}[+] =============================================== [+]${NC}"
+    echo -e "${GREEN}[+] =============================================== [+]${NC}"
+    echo -e "${GREEN}[+]              INSTALL JQ BERHASIL                [+]${NC}"
+    echo -e "${GREEN}[+] =============================================== [+]${NC}"
   else
     echo -e "                                                       "
     echo -e "${RED}[+] =============================================== [+]${NC}"
@@ -54,25 +54,23 @@ install_jq() {
 check_token() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]               LICENSY FarisOffc OFFC            [+]${NC}"
+  echo -e "${BLUE}[+]               LICENSY FarisOffc OFFC             [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "Farisoffc" ]; then
+  if [ "$USER_TOKEN" = "Faristamvan" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
-    echo -e "${GREEN}Yah Maaf Anda Tidak Dapat Akses ke Cmd Installer Faris,Dikarenakan Anda belom Membeli token ingin membeli token chat admin saja${NC}"
+    echo -e "${GREEN}Buy dulu Gih Ke FarisOffc${NC}"
     echo -e "${YELLOW}WHATSAPP : 6288297877862${NC}"
-    echo -e "${YELLOW}HARGA TOKEN : 15k FREE UPDATE JIKA ADA TOKEN BARU${NC}"
+    echo -e "${YELLOW}HARGA TOKEN : 10K FREE UPDATE JIKA ADA TOKEN BARU${NC}"
     echo -e "${YELLOW}©FarisOffc${NC}"
     exit 1
   fi
   clear
 }
-
-
 
 # Install theme
 install_theme() {
@@ -91,7 +89,7 @@ install_theme() {
     read -r SELECT_THEME
     case "$SELECT_THEME" in
       1)
-        THEME_URL=$(echo -e "https://github.com/Farisofc/panel/raw/main/C2.zip")
+        THEME_URL=$(echo -e "https://github.com/Farisofc/thema/raw/main/C2.zip")
         break
         ;;
       2)
@@ -99,7 +97,7 @@ install_theme() {
         break
         ;;
       3)
-        THEME_URL=$(echo -e "https://github.com/Farisofc/panel/raw/main/C3.zip")
+        THEME_URL=$(echo -e "https://github.com/Farisofc/thema/raw/main/C3.zip")
         break
         ;; 
       x)
@@ -225,7 +223,7 @@ uninstall_theme() {
   echo -e "${BLUE}[+]                    DELETE THEME                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  bash <(curl https://raw.githubusercontent.com/Farisofc/panel/main/repair.sh)
+  bash <(curl https://raw.githubusercontent.com/Farisofc/thema/main/repair.sh)
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "${GREEN}[+]                 DELETE THEME SUKSES             [+]${NC}"
@@ -244,7 +242,7 @@ echo -e "${BLUE}[+] =============================================== [+]${NC}"
 echo -e "                                                                   "
 
 # Unduh file tema
-wget -O /root/C2.zip https://github.com/Farisofc/panel/raw/main/C2.zip
+wget -O /root/C2.zip https://github.com/Farisofc/thema/raw/main/C2.zip
 
 # Ekstrak file tema
 unzip /root/C2.zip -d /root/pterodactyl
@@ -349,6 +347,39 @@ y
 y
 EOF
 
+install_panel() {
+echo -e "                                                       "
+echo -e "${BLUE}[+] ========================================== [+]${NC}"
+echo -e "${BLUE}[+]                    INSTALL PANEL                   [+]${NC}"
+echo -e "${BLUE}[+] ========================================== [+]${NC}"
+  echo -e "                                                       "
+read -p "Masukkan domain: " domain
+read -p "Masukkan Email: " email
+read -p "Masukkan Password Login: " password
+read -p "Masukkan Subdomain Panel: " subdomain
+read -p "Masukkan Domainnode: " domainnode
+bash <(curl -s https://pterodactyl-installer.se) <<EOF
+0
+farissss
+kiwkiw
+slebew
+faris002
+Asia/Jakarta
+$email
+$email
+farisoffc
+adm
+adm
+$password
+$subdomain
+y
+y
+yi
+y
+yes
+A
+EOF
+}
 
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
