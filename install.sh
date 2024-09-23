@@ -104,15 +104,6 @@ y
 yes
 A
 EOF
-echo -e "                                                       "
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e ""
-  sleep 2
-  clear
-  exit 0
-
 }
 
 
