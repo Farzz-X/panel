@@ -1,4 +1,4 @@
-#!/bin/bash
+i#!/bin/bash
 
 # Color
 BLUE='\033[0;34m'       
@@ -516,7 +516,7 @@ echo -e "${RED}⢸⣿⣿⣿⠇⢼⣿⣿⣿⣿⡿⠃⠜⣽⣿⣿⣿⣿⣿⣿⣿�
   echo  "7. Hack Back Panel"
   echo  "8. Ubah Pw Vps"
   echo  "x. Exit"
-  echo -e Masukkan pilihan 1/2/x:"
+  echo -e "Masukkan pilihan 1/2/x:"
   read -r MENU_CHOICE
   clear
 
