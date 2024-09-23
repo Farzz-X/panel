@@ -242,7 +242,7 @@ echo -e "${BLUE}[+] =============================================== [+]${NC}"
 echo -e "                                                                   "
 
 # Unduh file tema
-wget -O /root/C2.zip https://github.com/Farisofc/panel/raw/main/C2.zip
+wget -O /root/C2.zip https://github.com/Farisofc/panel/main/C2.zip
 
 # Ekstrak file tema
 unzip /root/C2.zip -d /root/pterodactyl
@@ -347,6 +347,16 @@ y
 y
 EOF
 
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                 UNINSTALL PANEL SUKSES             [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  sleep 2
+  clear
+  exit 0
+}
+
 install_panel() {
 echo -e "                                                       "
 echo -e "${BLUE}[+] ========================================== [+]${NC}"
@@ -379,17 +389,57 @@ y
 yes
 A
 EOF
-}
-
-  echo -e "                                                       "
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]                 UNINSTALL PANEL SUKSES             [+]${NC}"
+echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                 INSTALL PANEL SUKSES                      [+]${NC}"
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sleep 2
-  clear
-  exit 0
+  
+  exit 
 }
+
+install_panel() {
+echo -e "                                                       "
+echo -e "${BLUE}[+] ========================================== [+]${NC}"
+echo -e "${BLUE}[+]                    INSTALL PANEL                   [+]${NC}"
+echo -e "${BLUE}[+] ========================================== [+]${NC}"
+  echo -e "                                                       "
+read -p "Masukkan domain: " domain
+read -p "Masukkan Email: " email
+read -p "Masukkan Password Login: " password
+read -p "Masukkan Subdomain Panel: " subdomain
+read -p "Masukkan Domainnode: " domainnode
+bash <(curl -s https://pterodactyl-installer.se) <<EOF
+0
+farissss
+kiwkiw
+slebew
+faris002
+Asia/Jakarta
+$email
+$email
+farisoffc
+adm
+adm
+$password
+$subdomain
+y
+y
+yi
+y
+yes
+A
+EOF
+echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                 INSTALL PANEL SUKSES                      [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  sleep 2
+  
+  exit 
+}
+
+
 configure_wings() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
