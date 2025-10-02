@@ -568,9 +568,6 @@ echo -e "${RED}⢸⣿⣿⣿⠇⢼⣿⣿⣿⣿⡿⠃⠜⣽⣿⣿⣿⣿⣿⣿⣿�
   clear
 
   case "$MENU_CHOICE" in
-  0)
-  install_panel
-  ;;
     1)
       install_theme
       ;;
@@ -578,21 +575,15 @@ echo -e "${RED}⢸⣿⣿⣿⠇⢼⣿⣿⣿⣿⡿⠃⠜⣽⣿⣿⣿⣿⣿⣿⣿�
       uninstall_theme
       ;;
       3)
-      configure_wings
-      ;;
-      4)
-      create_node
-      ;;
-      5)
       uninstall_panel
       ;;
-      6)
+      4)
       install_themeSteeler
       ;;
-      7)
+      5)
       hackback_panel
       ;;
-      8)
+      6)
       ubahpw_vps
       ;;
     x)
