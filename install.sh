@@ -276,62 +276,7 @@ clear
 exit 0
 
 }
-create_node() {
-  echo -e "                                                       "
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                    CREATE NODE                     [+]${NC}"
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "                                                       "
-  #!/bin/bash
-#!/bin/bash
 
-# Minta input dari pengguna
-read -p "Masukkan nama lokasi: " location_name
-read -p "Masukkan deskripsi lokasi: " location_description
-read -p "Masukkan domain: " domain
-read -p "Masukkan nama node: " node_name
-read -p "Masukkan RAM (dalam MB): " ram
-read -p "Masukkan jumlah maksimum disk space (dalam MB): " disk_space
-read -p "Masukkan Locid: " locid
-
-# Ubah ke direktori pterodactyl
-cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
-
-# Membuat lokasi baru
-php artisan p:location:make <<EOF
-$location_name
-$location_description
-EOF
-
-# Membuat node baru
-php artisan p:node:make <<EOF
-$node_name
-$location_description
-$locid
-https
-$domain
-yes
-no
-no
-$ram
-$ram
-$disk_space
-$disk_space
-100
-8080
-2022
-/var/lib/pterodactyl/volumes
-EOF
-
-  echo -e "                                                       "
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]        CREATE NODE & LOCATION SUKSES             [+]${NC}"
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "                                                       "
-  sleep 2
-  clear
-  exit 0
-}
 uninstall_panel() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
@@ -357,113 +302,6 @@ EOF
   exit 0
 }
 
-install_panel() {
-echo -e "                                                       "
-echo -e "${BLUE}[+] ========================================== [+]${NC}"
-echo -e "${BLUE}[+]                    INSTALL PANEL                   [+]${NC}"
-echo -e "${BLUE}[+] ========================================== [+]${NC}"
-  echo -e "                                                       "
-read -p "Masukkan domain: " domain
-read -p "Masukkan Email: " email
-read -p "Masukkan Password Login: " password
-read -p "Masukkan Subdomain Panel: " subdomain
-read -p "Masukkan Domainnode: " domainnode
-bash <(curl -s https://pterodactyl-installer.se) <<EOF
-0
-farissss
-kiwkiw
-slebew
-faris002
-Asia/Jakarta
-$email
-$email
-farisoffc
-adm
-adm
-$password
-$subdomain
-y
-y
-yi
-y
-yes
-A
-EOF
-echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]                 INSTALL PANEL SUKSES                      [+]${NC}"
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "                                                       "
-  sleep 2
-  
-  exit 
-}
-
-install_panel() {
-echo -e "                                                       "
-echo -e "${BLUE}[+] ========================================== [+]${NC}"
-echo -e "${BLUE}[+]                    INSTALL PANEL                   [+]${NC}"
-echo -e "${BLUE}[+] ========================================== [+]${NC}"
-  echo -e "                                                       "
-read -p "Masukkan domain: " domain
-read -p "Masukkan Email: " email
-read -p "Masukkan Password Login: " password
-read -p "Masukkan Subdomain Panel: " subdomain
-read -p "Masukkan Domainnode: " domainnode
-bash <(curl -s https://pterodactyl-installer.se) <<EOF
-0
-farissss
-kiwkiw
-slebew
-faris002
-Asia/Jakarta
-$email
-$email
-farisoffc
-adm
-adm
-$password
-$subdomain
-y
-y
-yi
-y
-yes
-A
-EOF
-echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]                 INSTALL PANEL SUKSES                      [+]${NC}"
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "                                                       "
-  sleep 2
-  
-  exit 
-}
-
-
-configure_wings() {
-  echo -e "                                                       "
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                    CONFIGURE WINGS                 [+]${NC}"
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "                                                       "
-  #!/bin/bash
-
-# Minta input token dari pengguna
-read -p "Masukkan token Configure menjalankan wings: " wings
-
-eval "$wings"
-# Menjalankan perintah systemctl start wings
-sudo systemctl start wings
-
-  echo -e "                                                       "
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]                 CONFIGURE WINGS SUKSES             [+]${NC}"
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "                                                       "
-  sleep 2
-  clear
-  exit 0
-}
 hackback_panel() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
@@ -553,11 +391,8 @@ echo -e "${RED}⢠⣁⣀⣀⡀⢇⣀⣠⣤⣤⣴⣦⠎⡰⣿⣯⣴⣶⣶⣦⣴�
 echo -e "${RED}⢸⣿⣿⣿⠇⢼⣿⣿⣿⣿⡿⠃⠜⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠸⣿⣿⣿⡿ ${NC}"
   echo -e "                                                              "
   echo -e "BERIKUT LIST INSTALL :"
-  echo "0. Install panel"
   echo "1. Install theme"
   echo "2. Uninstall theme"
-  echo "3. Configure Wings"
-  echo "4. Create Node"
   echo "5. Uninstall Panel"
   echo "6. Stellar Theme"
   echo "7. Hack Back Panel"
