@@ -178,30 +178,16 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   echo -e "                                                                   "
 
     # Menanyakan informasi kepada pengguna untuk tema Enigma
-    echo -e "${YELLOW}Masukkan link wa (https://wa.me...) : ${NC}"
-    read LINK_WA
-    echo -e "${YELLOW}Masukkan link group (https://.....) : ${NC}"
-    read LINK_GROUP
-    echo -e "${YELLOW}Masukkan link channel (https://...) : ${NC}"
-    read LINK_CHNL
-
-    # Mengganti placeholder dengan nilai dari pengguna
-    sudo sed -i "s|LINK_WA|$LINK_WA|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
-    sudo sed -i "s|LINK_GROUP|$LINK_GROUP|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
-    sudo sed -i "s|LINK_CHNL|$LINK_CHNL|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
-    
-
   sudo mkdir -p /etc/apt/keyrings
   curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
   echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
   sudo apt update
   apt install nodejs -y
-  npm i -g yarn 
-  cd /var/www/pterodactyl
+  npm i -g yarn
+
+  # Run build process
   yarn
   yarn build:production
-  sudo rm /root/C3.zip
-  sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
