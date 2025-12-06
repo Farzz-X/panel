@@ -188,6 +188,8 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   # Run build process
   yarn
   yarn build:production
+  sudo rm /root/C3.zip
+  sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
