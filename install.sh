@@ -200,7 +200,6 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   cd /var/www/pterodactyl
   yarn
   yarn build:production
-  php artisan view:clear
   sudo rm /root/C3.zip
   sudo rm -rf /root/pterodactyl
 
