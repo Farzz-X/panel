@@ -203,6 +203,61 @@ else
 fi
 }
 
+install_nightcore() {
+    echo -e "${GREEN}Installing Nightcore Theme...${RESET}"
+
+    apt install sudo -y > /dev/null 2>&1
+
+    echo -e "${GREEN}Backing up existing pterodactyl...${RESET}"
+    cd /var/www/ > /dev/null 2>&1
+    tar -cvf Pterodactyl_Nightcore_Themebackup.tar.gz pterodactyl > /dev/null 2>&1
+
+    echo -e "${GREEN}Installing theme...${RESET}"
+    cd /var/www/pterodactyl > /dev/null 2>&1
+
+    echo -e "${GREEN}Removing old theme directory if exists...${RESET}"
+    rm -rf Pterodactyl_Nightcore_Theme > /dev/null 2>&1
+
+    echo -e "${GREEN}Downloading new theme...${RESET}"
+    git clone https://github.com/NoPro200/Pterodactyl_Nightcore_Theme.git > /dev/null 2>&1
+
+    cd Pterodactyl_Nightcore_Theme > /dev/null 2>&1
+    echo -e "${GREEN}Cleaning old theme files...${RESET}"
+    rm -f /var/www/pterodactyl/resources/scripts/Pterodactyl_Nightcore_Theme.css
+    rm -f /var/www/pterodactyl/resources/scripts/index.tsx
+
+    echo -e "${GREEN}Installing new theme files...${RESET}"
+    mv -f index.tsx /var/www/pterodactyl/resources/scripts/index.tsx
+    mv -f Pterodactyl_Nightcore_Theme.css /var/www/pterodactyl/resources/scripts/Pterodactyl_Nightcore_Theme.css
+
+    cd /var/www/pterodactyl > /dev/null 2>&1
+    echo -e "${GREEN}Installing Node.js...${RESET}"
+    curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - > /dev/null 2>&1
+    apt update -y > /dev/null 2>&1
+    apt install -y nodejs npm > /dev/null 2>&1
+
+    NODE_VERSION=$(node -v)
+    REQUIRED_VERSION="v16.20.2"
+
+    if [ "$NODE_VERSION" != "$REQUIRED_VERSION" ]; then
+        echo -e "${GREEN}Node.js version not ${YELLOW}${REQUIRED_VERSION}${GREEN}, fixing...${RESET}"
+        sudo npm install -g n > /dev/null 2>&1
+        sudo n 16 > /dev/null 2>&1
+    fi
+
+    echo -e "${GREEN}Installing Yarn...${RESET}"
+    npm i -g yarn > /dev/null 2>&1
+    yarn install > /dev/null 2>&1
+
+    echo -e "${GREEN}Rebuilding Panel...${RESET}"
+    yarn build:production > /dev/null 2>&1
+
+    echo -e "${GREEN}Optimizing Panel...${RESET}"
+    php artisan optimize:clear > /dev/null 2>&1
+
+    echo -e "${GREEN}Nebula Theme installed successfully!${RESET}"
+}
+
 
 # Uninstall theme
 uninstall_theme() {
@@ -381,10 +436,11 @@ echo -e "${RED}⢸⣿⣿⣿⠇⢼⣿⣿⣿⣿⡿⠃⠜⣽⣿⣿⣿⣿⣿⣿⣿�
   echo -e "BERIKUT LIST INSTALL :"
   echo "1. Install theme"
   echo "2. Uninstall theme"
-  echo "5. Uninstall Panel"
-  echo "6. Stellar Theme"
-  echo "7. Hack Back Panel"
-  echo "8. Ubah Pw Vps"
+  echo "3. Uninstall Panel"
+  echo "4. Stellar Theme"
+  echo "5. Hack Back Panel"
+  echo "6. Ubah Pw Vps"
+  echo "7. Install theme nebula"
   echo "x. Exit"
   echo -e "Masukkan pilihan 1/2/x:"
   read -r MENU_CHOICE
@@ -408,6 +464,9 @@ echo -e "${RED}⢸⣿⣿⣿⠇⢼⣿⣿⣿⣿⡿⠃⠜⣽⣿⣿⣿⣿⣿⣿⣿�
       ;;
       6)
       ubahpw_vps
+      ;;
+      7)
+      install_nightcore
       ;;
     x)
       echo "Keluar dari skrip."
